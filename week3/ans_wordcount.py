@@ -34,8 +34,8 @@ print_words() and print_top().
 
 """
 
-import sys
-import operator
+import sys                               # for file()
+import operator                          # for itemgetter() in sorted() key
 
 # +++your code here+++
 # Define print_words(filename) and print_top(filename) functions.
@@ -45,9 +45,9 @@ import operator
 
 def word_count(filename):
   w={}
-  file=open(filename,'r')
-  words=file.read().lower().split()
-  for s in words:
+  file=open(filename,'r')                 # opening a file in read mode
+  words=file.read().lower().split()       # converting to lower case & spliting into words
+  for s in words:                         # counting words & adding it to dict
     if s not in w:
       w[s]=1
     else:
@@ -57,7 +57,7 @@ def word_count(filename):
 
 def print_words(filename):
   w=word_count(filename)
-  for s in sorted(w):
+  for s in sorted(w):                     # printing in alphabetical order of key
     print(s,w[s])
   return
 
@@ -65,7 +65,7 @@ def print_top(filename):
   w=word_count(filename)
   w_s_r=sorted(w.items(),key=operator.itemgetter(1),reverse=True)
   i=0
-  for i in range(20):
+  for i in range(20):                     # printing in alphabetical order of values
     print(w_s_r[i][0],w_s_r[i][1])
   return
   
