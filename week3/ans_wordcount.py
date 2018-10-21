@@ -65,7 +65,7 @@ def print_top(filename):
   w=word_count(filename)
   w_s_r=sorted(w.items(),key=operator.itemgetter(1),reverse=True)
   i=0
-  for i in range(20):                     # printing in alphabetical order of values
+  for i in range(20):                     # printing in sorted order based on values
     print(w_s_r[i][0],w_s_r[i][1])
   return
   
