@@ -53,7 +53,7 @@ def extract_names(filename):
 
   # store the values in dictionary 
   for i in all:
-    if i[3] not in dict:                # check for repetitive name
+    if i[3] not in dict:                # check for repetitive name. Retains the most popular copy
       dict[i[3]]=i[1]
     if i[5] not in dict:
       dict[i[5]]=i[1]
