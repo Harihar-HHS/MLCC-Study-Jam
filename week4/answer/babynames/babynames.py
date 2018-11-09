@@ -55,13 +55,9 @@ def extract_names(filename):
   for i in all:
     if i[3] not in dict:                # check for repetitive name
       dict[i[3]]=i[1]
-    elif dict[i[3]]>i[1]:               # if repetitive name is present store the most popular one.
-      dict[i[3]]=i[1]                   # doing this will result in most popular copy instead of most recent/less popular one
     if i[5] not in dict:
       dict[i[5]]=i[1]
-    elif dict[i[5]]>i[1]:
-      dict[i[5]]=i[1]
-
+    
   n=sorted(dict)          # sort in alphbetical order of names
 
   for i in n:
