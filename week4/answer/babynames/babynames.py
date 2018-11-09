@@ -49,7 +49,7 @@ def extract_names(filename):
   list.append(year)
 
   #extract all the names with rank
-  all=re.findall(r"(<td>)(\d*)(</td><td>)(\w*)(</td><td>)(\w*)(</td>)",contents)
+  all=re.findall(r"(<td>)(\d*)(</td><td>)(\w*)(</td><td>)(\w*)",contents)
 
   # store the values in dictionary 
   for i in all:
